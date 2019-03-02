@@ -1,11 +1,14 @@
+.cont{
+margin-top:30px;
+}
 
 .left{
     height:1000px;
     font-family: Comic Sans MS;
-    }
+  }
 .container
 {
-    padding: 5px;
+    padding: 8px;
 }
 .container>li
 {
@@ -191,16 +194,17 @@ li:hover{
 
 a:hover 
 {
-    color: brown;
+    color: #6209778a;
     cursor: pointer;
 }
 
 .slotselector 
 {
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,.25);
     height:100%;
     display: none;
+    font-family: Comic Sans MS;
 }
 
 .timing_images {

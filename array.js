@@ -1,15 +1,3 @@
-function show()
-{
-    document.getElementsByClassName('map1')[0].style.display="none";
-    document.getElementsByClassName('slotselector')[0].style.display="block";
-   
-}
-
-
-
-
-
-
 var arrayofdoctors=[
     {
     "doctorListing": [
@@ -548,7 +536,7 @@ var arrayofdoctors=[
     "gender": "male",
     "address": [
     {
-    "addressLineOne": "shubham clinic",
+    "addressLineOne": "Shubham clinic",
     "addressLineTwo": "Rao Maduram Complex, Gurgaon RoadGurgaon, Haryana",
     "city": "gurugram",
     "state": "haryana",
@@ -1081,6 +1069,20 @@ for(let i=0;i<d.length;i++)
     else{
         document.getElementsByClassName("img-fluid")[i].src="https://zoylo-images.s3-ap-southeast-1.amazonaws.com/files/31b7fda6-4955-4d2b-aebf-18ec17d30c04-Doctors-Female.jpg";
     }
+
+
+}
+
+for(let i=0;i<d.length;i++)
+{
+document.getElementsByClassName('btn')[i].addEventListener('click',function()
+ {
+ document.getElementsByClassName('map1')[0].style.display="none";
+ document.getElementsByClassName('slotselector')[0].style.display="block";
+ document.getElementsByTagName('h3')[0].innerHTML=d[i].doctorListing[0].address[0].addressLineOne;
+ document.getElementsByClassName('addr',)[0].innerHTML=d[i].doctorListing[0].address[0].addressLineTwo;
+ document.getElementsByClassName('addr1')[0].innerHTML=d[i].doctorListing[0].address[0].addressLineOne;
+ });
 }
 
 
@@ -1105,6 +1107,7 @@ function initMap()
       var e=d[i].doctorListing[0].address[0].addressLineOne;
       var infoWindow=new google.maps.InfoWindow({
           content:e
+        
       });
       marker.addListener('click',function()
       {
