@@ -1090,7 +1090,7 @@ function initMap()
   {
       var location ={lat: 28.459497 ,lng: 77.026634};
       var map =new google.maps.Map(document.getElementById("map"),{
-          zoom: 11,
+          zoom: 8,
           center: location
       });
  for(let i=0;i<d.length;i++)
@@ -1105,13 +1105,13 @@ function initMap()
           map: map
       }) ;
       var e=d[i].doctorListing[0].address[0].addressLineOne;
-      var infoWindow=new google.maps.InfoWindow({
+     var infoWindow=new google.maps.InfoWindow({
           content:e
-        
-      });
+         });
       marker.addListener('click',function()
       {
           infoWindow.open(map,marker);
+          document.getElementsByClassName('0')[i].style.boxShadow='0 0 6px 0 rgba(0,0,0,.25)';
       })
  }
 }
