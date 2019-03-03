@@ -6,8 +6,12 @@
   
   width:100%;
   height:50px;
-	top:0;
+  top:0;
+  font-family: Comic Sans MS
 	
+}
+.dropdown a{
+  color:rgb(135, 0, 255);
 }
 .navbar-header
 {
@@ -22,8 +26,10 @@
   width:67px;
   height:50px;
   display: inline;
-  padding: 2px;
-	margin-left: 70px;
+  padding: 1px;
+  margin-left: 50px;
+  
+ 
 }
 .conta{
   width:100%;
@@ -85,12 +91,6 @@
 
 
 
-
-
-
-
-
-
 a>.head:hover{
   color:#a50ba57a;
 }
@@ -98,7 +98,7 @@ a>.head:hover{
 
 
 .cont{
-margin-top:30px;
+margin-top:60px;
 }
 
 .left{
@@ -374,6 +374,7 @@ label {
     margin-top: 10px;
 }
 li:hover{
+  
     box-shadow: 0 0 6px 0 rgba(0,0,0,.25);
 
 }
