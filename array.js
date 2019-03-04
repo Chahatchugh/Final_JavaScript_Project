@@ -1082,7 +1082,7 @@ document.getElementsByClassName('btn')[i].addEventListener('click',function()
  document.getElementsByTagName('h3')[0].innerHTML=data[i].doctorListing[0].address[0].addressLineOne;
  document.getElementsByClassName('addr',)[0].innerHTML=data[i].doctorListing[0].address[0].addressLineTwo;
  document.getElementsByClassName('addr1')[0].innerHTML=data[i].doctorListing[0].address[0].addressLineOne;
-     document.getElementById('total_amount').innerHTML="TotalAmount:"+d[i].doctorListing[0].cost;
+     document.getElementById('total_amount').innerHTML="TotalAmount:"+data[i].doctorListing[0].cost;
  });
 }
 
