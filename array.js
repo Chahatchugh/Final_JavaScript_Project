@@ -1047,22 +1047,22 @@ var arrayofdoctors=[
     ]
    },
    ];
-var b=JSON.stringify(arrayofdoctors);
-localStorage.setItem("key",b);
-var c=localStorage.getItem("key",b);
-var d=JSON.parse(c);
+var myjson=JSON.stringify(arrayofdoctors);
+localStorage.setItem("key",myjson);
+var content=localStorage.getItem("key",myjson);
+var data=JSON.parse(content);
 
 
-for(let i=0;i<d.length;i++)
+for(let i=0;i<data.length;i++)
 {
-    document.getElementsByClassName('head')[i].innerHTML=d[i].doctorListing[0].docName;
-    document.getElementsByClassName('cli')[i].innerHTML=d[i].doctorListing[0].address[0].addressLineOne;
-    document.getElementsByClassName('desc1')[i].innerHTML=d[i].doctorListing[0].qualification;
-    document.getElementsByClassName('desc')[i].innerHTML=d[i].doctorListing[0].specialization;
-    document.getElementsByTagName('h6')[i].innerHTML=d[i].doctorListing[0].cost;
+    document.getElementsByClassName('head')[i].innerHTML=data[i].doctorListing[0].docName;
+    document.getElementsByClassName('cli')[i].innerHTML=data[i].doctorListing[0].address[0].addressLineOne;
+    document.getElementsByClassName('desc1')[i].innerHTML=data[i].doctorListing[0].qualification;
+    document.getElementsByClassName('desc')[i].innerHTML=data[i].doctorListing[0].specialization;
+    document.getElementsByTagName('h6')[i].innerHTML=data[i].doctorListing[0].cost;
     document.getElementsByClassName('h3')
 
-    if(d[i].doctorListing[0].gender=="male")
+    if(data[i].doctorListing[0].gender=="male")
     {
       document.getElementsByClassName("img-fluid")[i].src="https://zoylo-images.s3-ap-southeast-1.amazonaws.com/files/052b97b5-811f-46aa-8f99-175d3e4a437d-Doctors-Male.jpg";
     }
@@ -1073,15 +1073,15 @@ for(let i=0;i<d.length;i++)
 
 }
 
-for(let i=0;i<d.length;i++)
+for(let i=0;i<data.length;i++)
 {
 document.getElementsByClassName('btn')[i].addEventListener('click',function()
  {
  document.getElementsByClassName('map1')[0].style.display="none";
  document.getElementsByClassName('slotselector')[0].style.display="block";
- document.getElementsByTagName('h3')[0].innerHTML=d[i].doctorListing[0].address[0].addressLineOne;
- document.getElementsByClassName('addr',)[0].innerHTML=d[i].doctorListing[0].address[0].addressLineTwo;
- document.getElementsByClassName('addr1')[0].innerHTML=d[i].doctorListing[0].address[0].addressLineOne;
+ document.getElementsByTagName('h3')[0].innerHTML=data[i].doctorListing[0].address[0].addressLineOne;
+ document.getElementsByClassName('addr',)[0].innerHTML=data[i].doctorListing[0].address[0].addressLineTwo;
+ document.getElementsByClassName('addr1')[0].innerHTML=data[i].doctorListing[0].address[0].addressLineOne;
  });
 }
 
@@ -1093,9 +1093,9 @@ function initMap()
           zoom: 8,
           center: location
       });
- for(let i=0;i<d.length;i++)
+ for(let i=0;i<data.length;i++)
  {    
- addMarker({lat: d[i].doctorListing[0].address[0].gpsCoordinates.gpsLatitude ,lng: d[i].doctorListing[0].address[0].gpsCoordinates.gpsLongitude});
+ addMarker({lat: data[i].doctorListing[0].address[0].gpsCoordinates.gpsLatitude ,lng: data[i].doctorListing[0].address[0].gpsCoordinates.gpsLongitude});
  
  
   function addMarker(coordinates)
@@ -1104,7 +1104,7 @@ function initMap()
           position: coordinates,
           map: map
       }) ;
-      var e=d[i].doctorListing[0].address[0].addressLineOne;
+      var e=data[i].doctorListing[0].address[0].addressLineOne;
      var infoWindow=new google.maps.InfoWindow({
           content:e
          });
