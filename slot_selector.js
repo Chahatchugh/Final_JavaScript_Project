@@ -180,3 +180,6 @@ function display_slot_selector() {
     maindiv[0].style.display = "block";
 
 }
+function thankyou(){
+    alert("Thank you");
+}
