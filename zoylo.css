@@ -246,12 +246,12 @@ li:hover{
  {
          width: 100%;
          height: 100px;
-         color: blue;
+         color: white;
          text-align: left;
          font-size:larger;
          bottom: 0;
          position: fixed;
-         background-color:skyblue;
+         background-color:RGB( 34,62,127);
          margin-left: -15px;
          padding: 10px;
          text-align: center;
