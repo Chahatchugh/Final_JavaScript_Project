@@ -102,12 +102,14 @@ margin-top:60px;
 }
 
 .left{
-    height:1000px;
+    height:600px;;
     font-family: Comic Sans MS;
+	
   }
 .container
 {
         padding: 8px;
+	height:600px;
 	overflow-y: scroll;
 }
 .container>li
